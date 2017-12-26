@@ -5,8 +5,7 @@ body {
 }
 
 #field {
-    width: 800px;
-    height: 300px;
+    width: 80%;
     float: left;
 }
 
@@ -18,7 +17,8 @@ body {
 
 .draggable {
     cursor: pointer;
-    width: 130px;
-    height: 128px;
+    width: 100px;
+    height: 100px;
+
     float: left;
 }

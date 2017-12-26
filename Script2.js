@@ -1,11 +1,11 @@
 var startButton = document.getElementById('start');
 var stopButton = document.getElementById('stop');
+var check = document.getElementById('check');
 var line = document.getElementById('line');
 
 var timer;
 
-
-stopButton.onclick = function() {
+stopButton.onclick = function () {
     startButton.disabled = false;
     stopButton.disabled = true;
     clearInterval(timer);
@@ -13,7 +13,7 @@ stopButton.onclick = function() {
     line.innerHTML = " ";
 }
 
-startButton.onclick = function() {
+startButton.onclick = function () {
     startButton.disabled = true;
     stopButton.disabled = false;
     animateLine();
@@ -22,13 +22,14 @@ startButton.onclick = function() {
 function animateLine() {
     var i = 0;
 
-    timer = setInterval(function() {
+    timer = setInterval(function () {
         line.style.width = (parseFloat(line.style.width || 0) + 1.70) + '%';
         line.innerHTML = ++i + " сек";
         if (60 == i) {
             stopButton.click();
             alert("Время вышло!!!!!!!");
         }
+        check.click();
 
     }, 1000);
 }
